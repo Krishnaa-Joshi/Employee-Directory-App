@@ -7,7 +7,7 @@ import { EmployeeContext } from "../Context/EmployeeContext";
    - Display All or searched Employees
 */
 function EmployeeList() {
-  const { employeesData, searchTerm, loading, error  } = useContext(EmployeeContext);
+  const { employeesData, searchTerm, loading} = useContext(EmployeeContext);
 
   const SearchValue = searchTerm.trim().toLowerCase();
 
