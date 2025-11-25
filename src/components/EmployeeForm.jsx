@@ -38,7 +38,9 @@ function EmployeeForm() {
     }
   }, [isEditing, selectedEmployee]);
 
-  if (!isAddEmployeeModalOpen && !isEditing) return null;
+  if (!isAddEmployeeModalOpen && !isEditing){
+    return null
+  }
 
   const handleClose = () => {
     setIsAddEmployeeModalOpen(false);

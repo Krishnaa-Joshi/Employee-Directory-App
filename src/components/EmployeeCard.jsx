@@ -20,10 +20,6 @@ function EmployeeCard() {
   setIsAddEmployeeModalOpen,
 } = useContext(EmployeeContext);
 
-  if (!selectedEmployee) return null;
-
-  const { name, department, role, avatar, empId, id } = selectedEmployee;
-
   return (
     <div className="fixed inset-0 bg-black/10 backdrop-blur-xs z-10 flex justify-center items-center px-3 sm:px-4">
       {/* Model */}
@@ -43,13 +39,13 @@ function EmployeeCard() {
           <div className="flex justify-center items-center flex-col">
             <div className="p-1 mb-2">
               <img
-                src={avatar || ProfilePic}
-                alt={name}
+                src={selectedEmployee.avatar || ProfilePic}
+                alt={selectedEmployee.name}
                 className="h-12 w-12 rounded-full object-cover"
               />
             </div>
             <span className="noto-sans-medium font-bold text-lg sm:text-xl">
-              {name}
+              {selectedEmployee.name}
             </span>
           </div>
 
@@ -58,19 +54,19 @@ function EmployeeCard() {
             {/* Employee ID */}
             <span className="font-medium">Employee ID</span>
             <span className="text-[#878787] text-right">
-              {empId || id}
+              {selectedEmployee.empId || selectedEmployee.id}
             </span>
 
             {/* Department */}
             <span className="font-medium">Department</span>
             <span className="text-[#878787] text-right">
-              {department}
+              {selectedEmployee.department}
             </span>
 
             {/* Role */}
             <span className="font-medium">Role</span>
             <span className="text-[#878787] text-right">
-              {role}
+              {selectedEmployee.role}
             </span>
           </div>
 

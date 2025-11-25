@@ -9,21 +9,19 @@ import { EmployeeContext } from "../Context/EmployeeContext";
 function EmployeeList() {
   const { employeesData, searchTerm, loading, error  } = useContext(EmployeeContext);
 
-  const safeEmployees = Array.isArray(employeesData) ? employeesData : [];
-
-  const term = searchTerm.trim().toLowerCase();
+  const SearchValue = searchTerm.trim().toLowerCase();
 
   const filteredEmployees =
-    term.length === 0
-      ? safeEmployees
-      : safeEmployees.filter((emp) => {
-          const nameMatch = emp.name?.toLowerCase().includes(term);
-          const deptMatch = emp.department?.toLowerCase().includes(term);
-          const roleMatch = emp.role?.toLowerCase().includes(term);
-          return nameMatch || deptMatch || roleMatch;
+    SearchValue.length === 0
+      ? employeesData
+      : employeesData.filter((emp) => {
+          const name = emp.name?.toLowerCase().includes(SearchValue);
+          const dept = emp.department?.toLowerCase().includes(SearchValue);
+          const role = emp.role?.toLowerCase().includes(SearchValue);
+          return name || dept || role;
         });
 
-  const showNoMatch = term.length > 0 && filteredEmployees.length === 0;
+  const NoMatchFound = SearchValue.length > 0 && filteredEmployees.length === 0;
 
   return (
     <>
@@ -43,9 +41,9 @@ function EmployeeList() {
 
       {/* display All or searched Employees  */}
       <div className="overflow-y-auto h-[calc(100vh-220px)] lg:h-[calc(90vh-240px)] scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-400">
-        {showNoMatch ? (
+        {NoMatchFound ? (
           <p className="text-center text-gray-500 mt-4">
-            No employees match "<span className="font-semibold">{term}</span>"
+            No employees match "<span className="font-semibold">{SearchValue}</span>"
           </p>
         ) : (
           filteredEmployees.map((emp) => (

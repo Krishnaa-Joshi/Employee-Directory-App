@@ -18,7 +18,7 @@ function AddEmployee() {
   };
 
   return (
-    <div className="flex items-center justify-between mx-4 my-6 flex-wrap gap-3">
+    <div className="flex items-center justify-between mx-4 my-6">
       {/* heading */}
       <span className="font-semibold text-lg">Employees</span>
 

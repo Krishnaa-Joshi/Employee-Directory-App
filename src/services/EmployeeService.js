@@ -9,25 +9,25 @@ const api = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,
 });
 
-// GET all employees
+// Fetch all employees
 export const getEmployees = async () => {
   const res = await api.get("/employees");
   return res.data; 
 };
 
-// POST new employee
+// Add new employee
 export const createEmployee = async (employeeData) => {
   const res = await api.post("/employees", employeeData);
   return res.data;
 };
 
-// PUT update employee
+// Update employee
 export const updateEmployee = async (id, employeeData) => {
   const res = await api.put(`/employees/${id}`, employeeData);
   return res.data;
 };
 
-// DELETE employee
+// Remove employee
 export const deleteEmployee = async (id) => {
   const res = await api.delete(`/employees/${id}`);
   return res.data;
