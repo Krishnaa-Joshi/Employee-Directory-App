@@ -37,7 +37,6 @@ function EmployeeList() {
       {loading && (
         <p className="text-center text-gray-500 mt-4">Loading employees...</p>
       )}
-      {error && <p className="text-center text-red-500 mt-4">{error}</p>}
 
       {/* display All or searched Employees  */}
       <div className="overflow-y-auto h-[calc(100vh-220px)] lg:h-[calc(90vh-240px)] scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-400">
