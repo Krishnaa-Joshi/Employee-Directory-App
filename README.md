@@ -13,7 +13,7 @@ A responsive Employee Directory Application built using React and Tailwind CSS, 
 ✔ REST API integration for data persistence                                                                                       
 
 🛠️ Tech Stack Used
-🔹 Frontend
+🔹 Frontend                                                                                                               
 React.js – Component-based UI development
 
 Tailwind CSS – Utility-first responsive styling
@@ -22,7 +22,7 @@ Axios – API requests and data handling
 
 React Hot Toast – User-friendly notifications
 
-🔹 Backend (Mock)
+🔹 Backend (Mock)                                                                                                  
 MockAPI.io – Simulated REST API for CRUD operations
 
 📡 API Functionalities
