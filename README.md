@@ -4,13 +4,13 @@ A responsive Employee Directory Application built using React and Tailwind CSS, 
 
 🚀 Live Features
 
-✔ Add new employees
-✔ Edit existing employee details
-✔ Delete employees
-✔ Search employees by name, department, or role
-✔ Fully responsive design (mobile, tablet & desktop)
-✔ Real-time notifications using toast messages
-✔ REST API integration for data persistence
+✔ Add new employees                                                                                                               
+✔ Edit existing employee details                                                                                                  
+✔ Delete employees                                                                                                              
+✔ Search employees by name, department, or role                                                                                  
+✔ Fully responsive design (mobile, tablet & desktop)                                                                          
+✔ Real-time notifications using toast messages                                                                                  
+✔ REST API integration for data persistence                                                                                       
 
 🛠️ Tech Stack Used
 🔹 Frontend
